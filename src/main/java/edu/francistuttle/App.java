@@ -1,5 +1,7 @@
 package edu.francistuttle;
 
+import java.util.ArrayList;
+
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.*;
@@ -51,10 +53,15 @@ public class App
           }
         }
       */
-
+ 
       ComputerLab cs = new ComputerLab();
 
-      cs.parse("C:\\Users\\cw1101046\\Desktop\\Github\\cwparse\\src\\main\\java\\edu\\francistuttle\\lab.xml");
+      ArrayList<Computer> lab1 = cs.parse("C:\\Users\\cw1101046\\Desktop\\Github\\cwparse\\src\\main\\java\\edu\\francistuttle\\lab.xml");
+
+      for (Computer c : lab1)
+      {
+        c.print();
+      }
     }
 
     public static Document readXMLDocumentFromFile(String fileNameWithPath) throws Exception {
